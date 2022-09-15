@@ -7,22 +7,25 @@ export const Home = styled.section`
     min-height: 100vh;
     color: ${theme.colors.textColor};
     display: flex;
-    justify-content: space-between;
+
   `}
 `;
 export const HomeContent = styled.main`
   ${() => css`
-    width: calc(100% - 450px);
+    
+    width: calc(100% - 50px);
     padding: 20px;
     overflow: auto;
-    height: 100vh;
+    
     box-sizing: border-box;
   `}
 `;
 export const HomeHeaderDetails = styled.div`
   ${() => css`
     display: flex;
-    justify-content: space-between;
+    
+    
+  
   `}
 `;
 export const HomeHeaderDetailsLogo = styled.h1`
@@ -30,16 +33,21 @@ export const HomeHeaderDetailsLogo = styled.h1`
     ${theme.mixins.logoStyle};
     text-transform: uppercase;
     margin: 0;
+    color: gold;
+    margin-left: 32rem;
   `}
 `;
 
 export const HomeHeaderDetailsDate = styled.p`
   ${() => css`
-    text-transform: capitalize;
+    text-transform: uppercase;
+    margin-left: 1rem;
+    margin-top: -1.8rem;
   `}
 `;
 export const HomeHeaderDetailsSearch = styled.div`
   ${({ theme }) => css`
+  margin-left: 15rem;
     display: flex;
     align-items: center;
     gap: 10px;

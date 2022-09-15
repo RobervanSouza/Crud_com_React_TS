@@ -1,7 +1,8 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 export const BoxLogin = styled.section`
   ${({ theme }) => css`
+  
     background: ${theme.colors.baseBg2};
     width: 330px;
     height: 414px;
@@ -13,8 +14,13 @@ export const BoxLogin = styled.section`
     justify-content: space-around;
     box-shadow: 3px 3px 6px 3px ${theme.colors.shadowColor};
     color: ${theme.colors.textColor};
+    //
+   
+
   `}
 `;
+
+
 export const BoxLoginLogo = styled.div`
   ${() => css`
     display: flex;
@@ -26,7 +32,7 @@ export const BoxLoginLogo = styled.div`
 export const BoxLoginLogoText = styled.h1`
   ${({ theme }) => css`
     font-family: ${theme.constants.logoFontFamily};
-    font-size: 4em;
+    font-size: 4rem;
     line-height: 80px;
     font-weight: 400;
     text-transform: uppercase;
@@ -49,12 +55,14 @@ export const BoxLoginLogoText = styled.h1`
       display: inline-block;
       letter-spacing: 9px;
       letter-spacing: 6px;
+
     }
   `}
 `;
 export const BoxLoginLogoImage = styled.img`
   ${() => css`
     width: 45%;
+    margin-top: 5rem;
   `}
 `;
 export const BoxLoginForm = styled.form`

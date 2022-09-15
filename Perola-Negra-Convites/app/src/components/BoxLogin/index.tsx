@@ -15,8 +15,8 @@ const BoxLogin = ({ onSubmitData, errorMessage }: BoxLoginProps) => {
   const [password, setPassword] = useState("");
 
   const handleSubmit = (): void => {
-  const data = { nickname:nikname, password:password};
-  onSubmitData(data);
+    const data = { nickname: nikname, password: password };
+    onSubmitData(data);
   };
 
   return (
@@ -28,6 +28,7 @@ const BoxLogin = ({ onSubmitData, errorMessage }: BoxLoginProps) => {
           <span>Negra</span>
         </S.BoxLoginLogoText>
         <S.BoxLoginLogoImage src={logo} alt="Logo" />
+      
       </S.BoxLoginLogo>
       <S.BoxLoginForm>
         <input
@@ -44,9 +45,9 @@ const BoxLogin = ({ onSubmitData, errorMessage }: BoxLoginProps) => {
         />
         <ButtonLarge value="Entrar" type="button" onClick={handleSubmit} />
       </S.BoxLoginForm>
-      {Boolean(errorMessage.length) && 
+      {Boolean(errorMessage.length) && (
         <S.BoxLoginError> {errorMessage} </S.BoxLoginError>
-      }
+      )}
     </S.BoxLogin>
   );
 };
