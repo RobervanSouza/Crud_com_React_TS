@@ -5,6 +5,8 @@ import Menu from "components/Menu";
 import { RoutePath } from "types/routes";
 import { navigationItems } from "data/navigation";
 import { useNavigate } from "react-router-dom";
+import ProductItemList from "components/ProductItemList";
+import ProductItem from "components/ProduvtItem";
 
 const Home = () => {
   const dateDescrition = DateTime.now().toLocaleString({
@@ -16,7 +18,7 @@ const Home = () => {
    const handleNavigation = (path: RoutePath) => navigate(path);
   return (
     <S.Home>
-      <header>
+      <body>
         <Menu
           active={RoutePath.HOME}
           navItems={navigationItems}
@@ -44,11 +46,13 @@ const Home = () => {
               <b> Convites </b>
             </S.HomeProductTitle>
             <S.HomeProductList>
-              <p> Lista de Convites </p>
+             <ProductItemList>
+              <ProductItem/>
+             </ProductItemList>
             </S.HomeProductList>
           </div>
         </S.HomeContent>
-      </header>
+      </body>
     </S.Home>
   );
 };
