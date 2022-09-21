@@ -58,3 +58,4 @@ export const ProductItemDescription = styled.small`
     font-size: 12px;
   `}
 `;
+

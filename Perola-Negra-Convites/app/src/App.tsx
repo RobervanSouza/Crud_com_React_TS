@@ -3,19 +3,31 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ThemeProvider } from "styled-components";
 import theme from "assets/styles/theme";
 import "./App.css";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter} from "react-router-dom";
 import Router from "./router";
+import { FavoritoProvider } from "pages/Favoritos/contexts/FavoritoContext";
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+     defaultOptions:{
+      queries:{
+        retry: false,
+      }
+     }
+
+})
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <BrowserRouter>
-        <QueryClientProvider client={queryClient}>
-          <Router />
-        </QueryClientProvider>
-      </BrowserRouter>
+      <QueryClientProvider client={queryClient}>
+          
+          <BrowserRouter>
+        <FavoritoProvider>
+            <Router />
+        </FavoritoProvider>
+          </BrowserRouter>
+
+      </QueryClientProvider>
     </ThemeProvider>
   );
 }

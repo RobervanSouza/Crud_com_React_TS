@@ -1,58 +1,37 @@
-export const products = [
+import { ProductResponse } from "types/Product";
+
+
+export const products: ProductResponse[] = [
   {
     id: "507f191e810c19729de860ea",
-    name: "Anchovas",
-    description: "Anchovas, Calabresa, Tomate, Congumelos e Cebola",
-    image: "/assets/images/menu/anchovas.png",
-    price: 40.29,
+    name: "Debutante",
+    description: "Convites para festa de 15 Anos",
+    image:
+      "https://i.pinimg.com/736x/d8/c5/2d/d8c52d9673b9115cd08872120d748800.jpg",
+    price: 4.29,
   },
   {
     id: "507f191e810c19729de860ea",
-    name: "Peperoni",
-    description: "Peperoni e Mussarela",
-    image: "/assets/images/menu/peperoni.png",
-    price: 40.69,
+    name: "Convite",
+    description: "Convites para festa de Casamento",
+    image:
+      "https://i.pinimg.com/736x/af/94/f9/af94f9c59728e094ecb4d17a6516099f.jpg",
+    price: 4.29,
   },
   {
     id: "507f191e810c19729de860ea",
-    name: "Camarão",
-    description: "Camarão, Brócolis, Azeitona, Tomate, Musarela e Presunto",
-    image: "/assets/images/menu/camarao.png",
-    price: 60.99,
+    name: "Convite",
+    description: "Convites para festa de 60 Anos",
+    image:
+      "https://i.pinimg.com/736x/00/fc/cd/00fccdaf0f2f01a01a2c4c2536620d87.jpg",
+    price: 4.29,
   },
   {
     id: "507f191e810c19729de860ea",
-    name: "Calamussa",
-    description: "Calabresa e Mussarela",
-    image: "/assets/images/menu/calamussa.png",
-    price: 30.29,
-  },
-  {
-    id: "507f191e810c19729de860ea",
-    name: "Marguerita",
-    description: "Mussarela, Tomate e Manjericão",
-    image: "/assets/images/menu/marguerita.png",
-    price: 40.49,
-  },
-  {
-    id: "507f191e810c19729de860ea",
-    name: "Bacon",
-    description: "Bacon, Pimentão, Champignon e Mussarela",
-    image: "/assets/images/menu/bacon.png",
-    price: 60.59,
-  },
-  {
-    id: "507f191e810c19729de860ea",
-    name: "Napolitana",
-    description: "Mussarela, Manjericão e Molho de Tomate",
-    image: "/assets/images/menu/napolitana.png",
-    price: 40.59,
-  },
-  {
-    id: "507f191e810c19729de860ea",
-    name: "Mussarela",
-    description: "Mussarela e Orégano",
-    image: "/assets/images/menu/mussarela.png",
-    price: 30.49,
+    name: "Convites",
+    description: "Convites para festa de Chá de Fralda",
+    image:
+      "https://i.pinimg.com/736x/00/fc/cd/00fccdaf0f2f01a01a2c4c2536620d87.jpg",
+    price: 4.29,
   },
 ];

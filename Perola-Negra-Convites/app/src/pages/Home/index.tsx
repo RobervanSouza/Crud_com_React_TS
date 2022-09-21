@@ -6,7 +6,10 @@ import { RoutePath } from "types/routes";
 import { navigationItems } from "data/navigation";
 import { useNavigate } from "react-router-dom";
 import ProductItemList from "components/ProductItemList";
-import ProductItem from "components/ProduvtItem";
+import ProductItem from "components/ProductItem";
+import { products } from "mocks/products";
+import { orders } from "mocks/orders";
+import { ProductResponse } from "types/Product";
 
 const Home = () => {
   const dateDescrition = DateTime.now().toLocaleString({
@@ -16,6 +19,7 @@ const Home = () => {
   });
    const navigate = useNavigate();
    const handleNavigation = (path: RoutePath) => navigate(path);
+   const handleSelection = (product: ProductResponse) => {}
   return (
     <S.Home>
       <body>
@@ -47,7 +51,16 @@ const Home = () => {
             </S.HomeProductTitle>
             <S.HomeProductList>
              <ProductItemList>
-              <ProductItem/>
+                 {Boolean(products.length) &&
+                products.map((product, index) => (
+                   <ProductItem
+                    product={product}
+                    key={`ProductItem-${index}`}
+                    onSelect={handleSelection}
+                  />
+                  
+                ))}
+              
              </ProductItemList>
             </S.HomeProductList>
           </div>
