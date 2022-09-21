@@ -15,9 +15,11 @@ export const favoritoContext = React.createContext<favoritoContextProps>({
   setFavorites: () => console.warn("FavoritoProvider"),
 });
 
+type Props= {
+  children?: JSX.Element | JSX.Element[];
+}
 
-
-export const FavoritoProvider: React.FC = ({children}) => {
+export const FavoritoProvider: React.FC  <Props>= ({children}) => {
   const [favorites, setFavorites] = useState<ProductResponse[]>(
     INITIAL_FAVORITES_VALUE
   );
@@ -29,7 +31,7 @@ export const FavoritoProvider: React.FC = ({children}) => {
       }}
 
       >
-      {children}
+{children}
       
     </favoritoContext.Provider>
   );

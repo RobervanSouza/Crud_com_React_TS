@@ -1,11 +1,14 @@
-import { Favorite } from '@mui/icons-material';
-import { Button, IconButton } from '@mui/material';
-import { ReactComponent as Logout } from 'assets/icons/logout.svg';
-import logo from 'assets/logo/logo.jpg';
-import FavoriteScreen from 'pages/Favoritos/contexts/FavoriteScreen';
-import { RoutePath } from 'types/routes';
+import { Favorite } from "@mui/icons-material";
+import { Badge, Button, IconButton } from "@mui/material";
+import { ReactComponent as Logout } from "assets/icons/logout.svg";
+import logo from "assets/logo/logo.jpg";
+import FavoriteScreen from "pages/Favoritos/contexts/FavoriteScreen";
+import { favoritoContext } from "pages/Favoritos/contexts/FavoritoContext";
+import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { RoutePath } from "types/routes";
 import * as S from "./style";
-import { NavItem } from './types';
+import { NavItem } from "./types";
 
 interface MenuProps {
   active: RoutePath;
@@ -14,7 +17,16 @@ interface MenuProps {
   onLogout: () => void;
 }
 
-const Menu = ({active, navItems, onNavigate, onLogout}: MenuProps) => {
+const Menu = ({ active, navItems, onNavigate, onLogout }: MenuProps) => {
+  const { favorites } = useContext(favoritoContext);
+
+  const favoritescont = favorites.length;
+
+  const navigate = useNavigate();
+  function handleclick() {
+    navigate(`/favoritos`);
+  }
+
   return (
     <header>
       <div>
@@ -26,18 +38,28 @@ const Menu = ({active, navItems, onNavigate, onLogout}: MenuProps) => {
             <S.MenuItem key={`MenuItem-${index}`} active={item.path === active}>
               <S.MenuItemButton
                 active={item.path === active}
-                onClick={() => onNavigate(item.path)}
+                onClick={() => navigate(item.path)}
               >
                 {item.icon}
               </S.MenuItemButton>
-              
             </S.MenuItem>
           ))}
           <S.MenuItemLogout onClick={onLogout}>
             {" "}
             <Logout></Logout>
           </S.MenuItemLogout>
-        
+          
+          <IconButton
+            size="large"
+            aria-label="show more"
+            aria-haspopup="true"
+            onClick={() => handleclick}
+            color="inherit"
+            >
+            <Badge badgeContent={favoritescont} color="primary">
+              <Favorite />
+            </Badge>
+          </IconButton>
         </S.Menu>
       </div>
     </header>
@@ -45,3 +67,8 @@ const Menu = ({active, navItems, onNavigate, onLogout}: MenuProps) => {
 };
 
 export default Menu;
+
+
+/*<Link to="/favoritos">
+
+            </Link>*/

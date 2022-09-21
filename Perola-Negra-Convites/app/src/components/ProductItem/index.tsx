@@ -28,8 +28,15 @@ const {favorites, setFavorites}= useContext(favoritoContext);
     
 const addFavoritos = () => {
   setFavorites([...favorites, product] );
-  console.log(product)
+  
 }
+
+
+  const removeFavorites = () => {
+    setFavorites(favorites.filter((prod) => prod.name !== product.name));
+  };
+
+  const isFavorite = favorites.some((prod) => prod.name === product.name);
 
 
 return (
@@ -48,8 +55,11 @@ return (
           {product.description}
         </S.ProductItemDescription>
         <CardActions disableSpacing>
-          <IconButton onClick={addFavoritos} aria-label="add to favorites">
-            <Favorite />
+          <IconButton
+            onClick={() => isFavorite ? removeFavorites() : addFavoritos()}
+            aria-label="add to favorites"
+          >
+            <Favorite color={isFavorite ? `error` : `disabled`} />
           </IconButton>
         </CardActions>
       </div>

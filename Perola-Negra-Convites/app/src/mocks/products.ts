@@ -12,7 +12,7 @@ export const products: ProductResponse[] = [
   },
   {
     id: "507f191e810c19729de860ea",
-    name: "Convite",
+    name: "Convite Para Festas",
     description: "Convites para festa de Casamento",
     image:
       "https://i.pinimg.com/736x/af/94/f9/af94f9c59728e094ecb4d17a6516099f.jpg",
@@ -20,7 +20,7 @@ export const products: ProductResponse[] = [
   },
   {
     id: "507f191e810c19729de860ea",
-    name: "Convite",
+    name: "Convite 15 anos",
     description: "Convites para festa de 60 Anos",
     image:
       "https://i.pinimg.com/736x/00/fc/cd/00fccdaf0f2f01a01a2c4c2536620d87.jpg",
