@@ -15,6 +15,7 @@ interface MenuProps {
   navItems: NavItem[];
   onNavigate: (data: RoutePath) => void;
   onLogout: () => void;
+
 }
 
 const Menu = ({ active, navItems, onNavigate, onLogout }: MenuProps) => {

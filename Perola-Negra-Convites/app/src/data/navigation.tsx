@@ -22,7 +22,7 @@ export const navigationItems: NavItem[] = [
     
     icon: (
       
-        <Button variant="outlined" startIcon={<Favorite />}></Button>
+      <Button variant="outlined" startIcon={<Favorite />}></Button>
       
     ),
     path: RoutePath.SETTINGS,

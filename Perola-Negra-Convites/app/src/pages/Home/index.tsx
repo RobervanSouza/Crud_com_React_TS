@@ -20,6 +20,7 @@ const Home = () => {
    const navigate = useNavigate();
    const handleNavigation = (path: RoutePath) => navigate(path);
    const handleSelection = (product: ProductResponse) => {}
+   
   return (
     <S.Home>
       <body>
@@ -28,6 +29,7 @@ const Home = () => {
           navItems={navigationItems}
           onNavigate={handleNavigation}
           onLogout={() => navigate(RoutePath.LOGIN)}
+          
         />
         <S.HomeContent>
           <S.HomeHeaderDetails>
