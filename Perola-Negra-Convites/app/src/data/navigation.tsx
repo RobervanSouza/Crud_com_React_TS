@@ -17,14 +17,4 @@ export const navigationItems: NavItem[] = [
     icon: <Home />,
     path: RoutePath.HOME,
   },
-
-  {
-    
-    icon: (
-      
-      <Button variant="outlined" startIcon={<Favorite />}></Button>
-      
-    ),
-    path: RoutePath.SETTINGS,
-  },
 ];

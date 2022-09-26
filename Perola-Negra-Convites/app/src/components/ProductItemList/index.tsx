@@ -16,14 +16,16 @@ const ProductItemList = ({children} : ProductItemListProps) => {
   return (
     <section className="">
       <S.ProductItemListHeader>
-        <pre>
-          {" "}
-          {JSON.stringify(
-            favorites.map((product) => product.name),
-            undefined,
-            2
-          )} 
-        </pre>
+   
+
+     <pre>
+       {" "}
+       {JSON.stringify(
+         favorites.map((product) => product.name),
+         undefined,
+         2
+       )}
+     </pre>
         <S.ProductItemListHeaderTitle>
        
           Todos os Convites
@@ -42,3 +44,5 @@ const ProductItemList = ({children} : ProductItemListProps) => {
 };
 
 export default ProductItemList;
+
+    

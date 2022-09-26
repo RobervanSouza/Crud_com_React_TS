@@ -14,7 +14,7 @@ const Router = () => {
         <Routes>
           <Route path={RoutePath.LOGIN} element={<Login />} />
           <Route path={RoutePath.HOME} element={<Home />} />
-          <Route path={RoutePath.SETTINGS}element={<FavoriteScreen/>} />
+
           <Route path={RoutePath.FAVORITOS}element={<FavoriteScreen/>} />
         </Routes>
      

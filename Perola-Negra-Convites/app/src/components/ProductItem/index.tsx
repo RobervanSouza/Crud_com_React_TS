@@ -48,6 +48,12 @@ return (
         alt={`Convite de ${product.name}
         `}
       />
+        <IconButton
+          onClick={() => isFavorite ? removeFavorites() : addFavoritos()}
+          aria-label="add to favorites"
+        >
+          <Favorite color={isFavorite ? `error` : `disabled`} />
+        </IconButton>
       <div>
         <S.ProductItemName>{product.name}</S.ProductItemName>
         <S.ProductItemPrice>{product.price}</S.ProductItemPrice>
@@ -55,12 +61,6 @@ return (
           {product.description}
         </S.ProductItemDescription>
         <CardActions disableSpacing>
-          <IconButton
-            onClick={() => isFavorite ? removeFavorites() : addFavoritos()}
-            aria-label="add to favorites"
-          >
-            <Favorite color={isFavorite ? `error` : `disabled`} />
-          </IconButton>
         </CardActions>
       </div>
     </S.ProductItem>

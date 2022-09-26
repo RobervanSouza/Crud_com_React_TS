@@ -15,7 +15,7 @@ interface MenuProps {
   navItems: NavItem[];
   onNavigate: (data: RoutePath) => void;
   onLogout: () => void;
-
+  
 }
 
 const Menu = ({ active, navItems, onNavigate, onLogout }: MenuProps) => {
@@ -54,7 +54,7 @@ const Menu = ({ active, navItems, onNavigate, onLogout }: MenuProps) => {
             size="large"
             aria-label="show more"
             aria-haspopup="true"
-            onClick={() => handleclick}
+            onClick={() =>  navigate(`/favoritos`)}
             color="inherit"
             >
             <Badge badgeContent={favoritescont} color="primary">
