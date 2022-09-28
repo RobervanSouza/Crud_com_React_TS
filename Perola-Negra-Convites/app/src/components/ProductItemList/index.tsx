@@ -19,7 +19,7 @@ const ProductItemList = ({children} : ProductItemListProps) => {
    
 
      <pre>
-       {" "}
+       {"Convites Favoritos "}
        {JSON.stringify(
          favorites.map((product) => product.name),
          undefined,

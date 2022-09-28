@@ -5,7 +5,7 @@ export enum RoutePath {
   LOGIN = "/login",
 
   FAVORITOS= "/favoritos",
-  SETTINGS_PRODUCTS = "products",
+  SETTINGS_PRODUCTS = "/products",
 
 
 }

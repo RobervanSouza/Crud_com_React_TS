@@ -22,7 +22,7 @@ const {favorites, setFavorites}= useContext(favoritoContext);
   const navigate = useNavigate();
   
     function handleclick() {
-      navigate(`/favorites/${product.name}`);
+      navigate(`${product.name}`);
     
     }
     
@@ -44,7 +44,7 @@ return (
     <S.ProductItem role="listitem">
       <S.ProductItemImage
         src={product.image}
-        onClick={handleclick}
+       
         alt={`Convite de ${product.name}
         `}
       />

@@ -49,7 +49,18 @@ export const ProductItemPrice = styled.strong`
   `}
 `;
 
+
+
 export const ProductItemDescription = styled.small`
+  ${({ theme }) => css`
+    ${theme.mixins.bodyStyle()}
+    text-align: center;
+    max-width: 90%;
+    margin: 0;
+    font-size: 12px;
+  `}
+`;
+export const Categotia = styled.small`
   ${({ theme }) => css`
     ${theme.mixins.bodyStyle()}
     text-align: center;
