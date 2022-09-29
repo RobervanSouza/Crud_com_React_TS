@@ -74,3 +74,8 @@ export default ProductItem;
 
 
 
+/* const name = () =>
+ { const [ data, setData,] = useState(products); 
+  const filterresultado = (catItem: string) =>{
+     const resultado = products.filter((curData) => {
+       return curData.name === catItem; }) } } */
