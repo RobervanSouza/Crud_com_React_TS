@@ -5,19 +5,24 @@ export const ProductItemListHeader = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 90px;
+    
   `}
 `;
 
 export const ProductItemListHeaderTitle = styled.h1`
+
   ${() => css`
-    margin: 0;
+
+  margin: 0rem 29rem 0rem 3rem; 
+  justify-content: space-between;
   `}
+
 `;
 
 export const ProductItemListHeaderSelect = styled.select`
   ${({ theme }) => css`
-    ${theme.mixins.select()};
+ 
   `}
 `;
 
@@ -30,3 +35,85 @@ export const ProductItemList = styled.div`
     flex-wrap: wrap;
   `}
 `;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export const ProductItem = styled.div`
+  ${({ theme }) => css`
+    background: ${theme.colors.baseBg2};
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
+    align-items: center;
+    max-width: 200px;
+    width: 100%;
+    cursor: pointer;
+    min-height: 225px;
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      gap: 10px;
+    }
+  `}
+`;
+
+export const ProductItemImage = styled.img`
+  ${() => css`
+    width: 150px;
+    margin-top: -50px;
+  `}
+`;
+
+export const ProductItemName = styled.h3`
+  ${({ theme }) => css`
+    ${theme.mixins.bodyStyle()}
+    text-align: center;
+    max-width: 90%;
+    margin: 0;
+  `}
+`;
+
+export const ProductItemPrice = styled.strong`
+  ${({ theme }) => css`
+    ${theme.mixins.bodyStyle()}
+    text-align: center;
+    max-width: 90%;
+    margin: 0;
+    color: ${theme.colors.primaryColor};
+  `}
+`;
+
+export const ProductItemDescription = styled.small`
+  ${({ theme }) => css`
+    ${theme.mixins.bodyStyle()}
+    text-align: center;
+    max-width: 90%;
+    margin: 0;
+    font-size: 12px;
+  `}
+`;
+export const Categotia = styled.small`
+  ${({ theme }) => css`
+    ${theme.mixins.bodyStyle()}
+    text-align: center;
+    max-width: 90%;
+    margin: 0;
+    font-size: 12px;
+  `}
+`;
+

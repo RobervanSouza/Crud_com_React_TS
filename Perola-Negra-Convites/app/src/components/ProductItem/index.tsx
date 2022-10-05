@@ -7,30 +7,26 @@ import { useContext } from "react";
 import { products } from "mocks/products";
 import { useNavigate } from "react-router-dom";
 import React from "react-router";
+import { useEffect, useState } from "react";
+
+
 
 
 type ProductItemProps = {
-  product: ProductResponse
-  onSelect: (data: ProductResponse) => void
-  
-}
- export const ProductItem = ( {product, onSelect, }: ProductItemProps) => {
- 
-
-
-const {favorites, setFavorites}= useContext(favoritoContext);
+  product: ProductResponse;
+  onSelect: (data: ProductResponse) => void;
+};
+export const ProductItem = ({ product, onSelect }: ProductItemProps) => {
+  const { favorites, setFavorites } = useContext(favoritoContext);
   const navigate = useNavigate();
-  
-    function handleclick() {
-      navigate(`${product.name}`);
-    
-    }
-    
-const addFavoritos = () => {
-  setFavorites([...favorites, product] );
-  
-}
 
+  function handleclick() {
+    navigate(`${product.name}`);
+  }
+
+  const addFavoritos = () => {
+    setFavorites([...favorites, product]);
+  };
 
   const removeFavorites = () => {
     setFavorites(favorites.filter((prod) => prod.name !== product.name));
@@ -38,43 +34,39 @@ const addFavoritos = () => {
 
   const isFavorite = favorites.some((prod) => prod.name === product.name);
 
+  // test
 
-return (
-  <div>
-    <S.ProductItem role="listitem">
-      <S.ProductItemImage
-        src={product.image}
-       
-        alt={`Convite de ${product.name}
-        `}
-      />
+
+  
+  return (
+    
+    <div>
+      <S.ProductItem role="listitem">
+        <S.ProductItemImage src={product.image} alt={`Convite de ${product.name}`} />
         <IconButton
-          onClick={() => isFavorite ? removeFavorites() : addFavoritos()}
+          onClick={() => (isFavorite ? removeFavorites() : addFavoritos())}
           aria-label="add to favorites"
         >
           <Favorite color={isFavorite ? `error` : `disabled`} />
         </IconButton>
-      <div>
-        <S.ProductItemName>{product.name}</S.ProductItemName>
-        <S.ProductItemPrice>{product.price}</S.ProductItemPrice>
-        <S.ProductItemDescription>
-          {product.description}
-        </S.ProductItemDescription>
-        <CardActions disableSpacing>
-        </CardActions>
-      </div>
-    </S.ProductItem>
-  </div>
-);
+        <div>
+          <S.ProductItemName>{product.name}</S.ProductItemName>
+          <S.ProductItemPrice>{product.price}</S.ProductItemPrice>
+          <S.ProductItemDescription>
+            {product.description}
+          </S.ProductItemDescription>
+          <CardActions disableSpacing></CardActions>
+        </div>
+      </S.ProductItem>
+    </div>
+  );
 };
 
 export default ProductItem;
 
 /*<pre> {JSON.stringify(favorites.map((product) =>product.name ), undefined, 2)}</pre>*/
 
-
-
-/* const name = () =>
+/* const category = () =>
  { const [ data, setData,] = useState(products); 
   const filterresultado = (catItem: string) =>{
      const resultado = products.filter((curData) => {
