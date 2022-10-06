@@ -41,10 +41,7 @@ const Home = () => {
                 {dateDescrition}
               </S.HomeHeaderDetailsDate>
             </div>
-            <S.HomeHeaderDetailsSearch>
-              <Search />
-              <input type="text" placeholder="Pesquise seu Convite" />
-            </S.HomeHeaderDetailsSearch>
+          
           </S.HomeHeaderDetails>
 
           <div>

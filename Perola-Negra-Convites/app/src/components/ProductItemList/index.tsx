@@ -1,7 +1,9 @@
 import { imageListItemClasses } from "@mui/material";
+import ProductItem from "components/ProductItem";
 import { products } from "mocks/products";
 import { favoritoContext } from "pages/Favoritos/contexts/FavoritoContext";
 import { useContext, useState } from "react";
+import { ProductResponse } from "types/Product";
 import * as S from "./style";
 
 interface ProductItemListProps {
@@ -16,7 +18,7 @@ const ProductItemList = ({ children }: ProductItemListProps) => {
   // 3. Utilizo o filter para atualizar a lista filtrada
 
   const [produtos, definirProdutos] = useState(products);
-
+const handleSelection = (product: ProductResponse) => {};
   function filtrarPorCategoria(name: any) {
     const resultadoDoFiltro = products.filter(
       (product) => product.name === name );
@@ -27,63 +29,64 @@ const ProductItemList = ({ children }: ProductItemListProps) => {
   return (
     <section className="">
       <S.ProductItemListHeader>
-        <pre>
-          {"Convites Favoritos "}
-          {JSON.stringify(
-            favorites.map((product) => product.name),
-            undefined,
-            2
-          )}
-        </pre>
         <S.ProductItemListHeaderTitle>
-          <div className="teste">
-            <button
-              onClick={() => {
-                definirProdutos(products);
-              }}
-            >
-              Todos
-            </button>
-            <button
-              onClick={() => {
-                filtrarPorCategoria("Infantil");
-              }}
-            >
-              {" "}
-              Infantil{" "}
-            </button>
-            <button
-              onClick={() => {
-                filtrarPorCategoria("15 anos");
-              }}
-            >
-              {" "}
-              15 anos{" "}
-            </button>
-            <button
-              onClick={() => {
-                filtrarPorCategoria("60 anos");
-              }}
-            >
-              {" "}
-              60 anos{" "}
-            </button>
-            <button
-              onClick={() => {
-                filtrarPorCategoria("Casamento");
-              }}
-            >
-              {" "}
-              Casamento{" "}
-            </button>
-          </div>
-          {produtos.map((products) => (
+          <S.titulo>
             <div>
-              <h1 key={products.name}>{products.name}</h1>
-              <img src={products.image} alt="" />
-              
+              <button
+                onClick={() => {
+                  definirProdutos(products);
+                }}
+              >
+                Todos
+              </button>
+              <button
+                onClick={() => {
+                  filtrarPorCategoria("Infantil");
+                }}
+              >
+                {" "}
+                Infantil{" "}
+              </button>
+              <button
+                onClick={() => {
+                  filtrarPorCategoria("15 anos");
+                }}
+              >
+                {" "}
+                15 anos{" "}
+              </button>
+              <button
+                onClick={() => {
+                  filtrarPorCategoria("60 anos");
+                }}
+              >
+                {" "}
+                60 anos{" "}
+              </button>
+              <button
+                onClick={() => {
+                  filtrarPorCategoria("Casamento");
+                }}
+              >
+                {" "}
+                Casamento{" "}
+              </button>
             </div>
-          ))}
+          </S.titulo>
+          <S.teste>
+            <div>
+              {produtos.map((products) => (
+                <S.card>
+                  <div>
+                    <ProductItem
+                      product={products}
+                      onSelect={handleSelection}
+                    />
+                  </div>
+                </S.card>
+              ))}
+            </div>
+          </S.teste>
         </S.ProductItemListHeaderTitle>
       </S.ProductItemListHeader>
       <S.ProductItemList>{children}</S.ProductItemList>

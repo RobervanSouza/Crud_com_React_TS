@@ -13,7 +13,7 @@ export const ProductItemListHeader = styled.div`
 export const ProductItemListHeaderTitle = styled.h1`
 
   ${() => css`
-
+  margin-left: 23rem;
   margin: 0rem 29rem 0rem 3rem; 
   justify-content: space-between;
   `}
@@ -107,13 +107,38 @@ export const ProductItemDescription = styled.small`
     font-size: 12px;
   `}
 `;
-export const Categotia = styled.small`
+
+export const teste = styled.div`
   ${({ theme }) => css`
     ${theme.mixins.bodyStyle()}
-    text-align: center;
-    max-width: 90%;
-    margin: 0;
-    font-size: 12px;
+    margin-left: 25rem;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
+    align-items: center;
+    max-width: 20px;
+    width: 10%;
+    
+  `}
+`;
+
+export const titulo = styled.div`
+  ${({ theme }) => css`
+    ${theme.mixins.bodyStyle()}
+    margin-left: 16rem;
+    justify-content: space-between;
+    color: red;
+  `}
+`;
+
+export const card= styled.div`
+  ${({ theme }) => css`
+    ${theme.mixins.bodyStyle()}
+    margin-left: 16rem;
+    justify-content: space-between;
+    color: red;
   `}
 `;
 

@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-
+import { Theme } from "types/styled-components";
 
 export const Favoritos = styled.div`
   ${({ theme }) => css`
@@ -20,6 +20,30 @@ export const Favoritos = styled.div`
       justify-content: space-around;
       align-items: center;
       gap: 10px;
+    }
+  `}
+`;
+
+
+
+
+
+
+
+
+
+
+
+export const Logo = styled.div`
+  ${() => css`
+    margin-left: 2rem;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 20px 0;
+    img {
+      height: 80px;
     }
   `}
 `;

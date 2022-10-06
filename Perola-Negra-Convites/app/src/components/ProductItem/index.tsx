@@ -1,3 +1,4 @@
+
 import * as S from "./style";
 import { ProductResponse } from "types/Product";
 import { CardActions, IconButton } from "@mui/material";
@@ -63,6 +64,7 @@ export const ProductItem = ({ product, onSelect }: ProductItemProps) => {
 };
 
 export default ProductItem;
+
 
 /*<pre> {JSON.stringify(favorites.map((product) =>product.name ), undefined, 2)}</pre>*/
 

@@ -33,7 +33,7 @@ const BoxLogin = ({ onSubmitData, errorMessage }: BoxLoginProps) => {
       <S.BoxLoginForm>
         <input
           type="text"
-          placeholder="nikname"
+          placeholder="digite seu email"
           value={nikname}
           onChange={({ target }) => setNickname(target.value)}
         />
