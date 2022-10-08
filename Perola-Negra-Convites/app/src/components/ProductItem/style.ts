@@ -10,13 +10,13 @@ export const ProductItem = styled.div`
     gap: 15px;
     align-items: center;
     max-width: 200px;
-    width: 100%;
+    width: 180%;
     cursor: pointer;
     min-height: 225px;
     div {
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
+  
       align-items: center;
       gap: 10px;
     }
@@ -26,7 +26,7 @@ export const ProductItem = styled.div`
 export const ProductItemImage = styled.img`
   ${() => css`
     width: 150px;
-    margin-top: -50px;
+    margin-top: 10px;
   `}
 `;
 
@@ -52,15 +52,6 @@ export const ProductItemPrice = styled.strong`
 
 
 export const ProductItemDescription = styled.small`
-  ${({ theme }) => css`
-    ${theme.mixins.bodyStyle()}
-    text-align: center;
-    max-width: 90%;
-    margin: 0;
-    font-size: 12px;
-  `}
-`;
-export const Categotia = styled.small`
   ${({ theme }) => css`
     ${theme.mixins.bodyStyle()}
     text-align: center;

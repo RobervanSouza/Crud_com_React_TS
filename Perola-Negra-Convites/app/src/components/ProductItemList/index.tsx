@@ -73,20 +73,20 @@ const handleSelection = (product: ProductResponse) => {};
               </button>
             </div>
           </S.titulo>
-          <S.teste>
+       
             <div>
+              <S.card>
               {produtos.map((products) => (
-                <S.card>
                   <div>
                     <ProductItem
                       product={products}
                       onSelect={handleSelection}
                     />
                   </div>
-                </S.card>
               ))}
+              </S.card>
             </div>
-          </S.teste>
+          
         </S.ProductItemListHeaderTitle>
       </S.ProductItemListHeader>
       <S.ProductItemList>{children}</S.ProductItemList>

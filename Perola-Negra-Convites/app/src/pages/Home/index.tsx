@@ -29,7 +29,6 @@ const Home = () => {
           navItems={navigationItems}
           onNavigate={handleNavigation}
           onLogout={() => navigate(RoutePath.LOGIN)}
-          
         />
         <S.HomeContent>
           <S.HomeHeaderDetails>
@@ -41,7 +40,6 @@ const Home = () => {
                 {dateDescrition}
               </S.HomeHeaderDetailsDate>
             </div>
-          
           </S.HomeHeaderDetails>
 
           <div>
@@ -49,18 +47,9 @@ const Home = () => {
               <b> Convites </b>
             </S.HomeProductTitle>
             <S.HomeProductList>
-             <ProductItemList>
-                 {Boolean(products.length) &&
-                products.map((product, index) => (
-                   <ProductItem
-                    product={product}
-                    key={`ProductItem-${index}`}
-                    onSelect={handleSelection}
-                  />
-                  
-                ))}
-              
-             </ProductItemList>
+              <ProductItemList>
+                
+              </ProductItemList>
             </S.HomeProductList>
           </div>
         </S.HomeContent>

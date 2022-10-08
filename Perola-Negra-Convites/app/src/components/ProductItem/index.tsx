@@ -48,6 +48,7 @@ export const ProductItem = ({ product, onSelect }: ProductItemProps) => {
           onClick={() => (isFavorite ? removeFavorites() : addFavoritos())}
           aria-label="add to favorites"
         >
+          
           <Favorite color={isFavorite ? `error` : `disabled`} />
         </IconButton>
         <div>

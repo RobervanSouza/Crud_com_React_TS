@@ -51,6 +51,7 @@
     ]
   },
   "devDependencies": {
-    "@types/luxon": "^3.0.1"
+    "@types/luxon": "^3.0.1",
+    "miragejs": "^0.1.45"
   }
 }

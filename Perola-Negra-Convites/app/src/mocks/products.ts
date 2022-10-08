@@ -1,3 +1,4 @@
+import { createServer, Model } from "miragejs";
 import { ProductResponse } from "types/Product";
 
 
@@ -35,3 +36,5 @@ export const products: ProductResponse[] = [
     price: 4.29,
   },
 ];
+  
+   

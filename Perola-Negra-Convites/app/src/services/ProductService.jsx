@@ -1,4 +1,18 @@
+class ProductsService {
+  static async getLista() {
+    fetch("/jogos");
+  }
+  static getCreate() {}
+  static getId() {}
+  static getDelete() {}
+  static getUpdate() {}
+}
 
+export default ProductsService;
+
+
+
+ // fetch();
 /*
 import { Api } from "helpers/endpoints/Api";
 import { endpoint } from "helpers/endpoints";
